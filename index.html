@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Hub - SMK Swasta Mandiri</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Orbitron:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="welcome-screen">
+      <div class="welcome-content">
+        <div class="welcome-logo-box">
+          <img
+            src="img/logo.jpeg"
+            alt="Logo SMK Mandiri"
+            class="welcome-logo-img"
+          />
+        </div>
+        <h1 class="welcome-title">SYSTEM INITIATING...</h1>
+        <h2 class="welcome-school">SMK SWASTA MANDIRI</h2>
+        <p class="welcome-sub">
+          Yayasan Pendidikan Siap Mandiri - Interactive Terminal
+        </p>
+        <div class="loading-container">
+          <div class="loading-bar"></div>
+          <span class="loading-text">CONNECTING TO GAME HUB...</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="cyber-glow glow-gold"></div>
+      <div class="cyber-glow glow-blue"></div>
+      <div class="cyber-glow glow-red"></div>
+
+      <header class="main-header active-anim staggered-1">
+        <div class="header-brand-left">
+          <div
+            class="logo-wrapper badge-ypsm"
+            title="Yayasan Pendidikan Siap Mandiri"
+          >
+            <img src="img/logo.jpeg" alt="Logo YPSM" class="img-fluid-logo" />
+          </div>
+          <div class="brand-text">
+            <span class="text-top">YAYASAN PENDIDIKAN</span>
+            <span class="text-bottom">SIAP MANDIRI</span>
+          </div>
+        </div>
+
+        <div class="header-brand-center">
+          <h1 class="portal-main-title">SMK SWASTA MANDIRI</h1>
+          <div class="portal-badge-tag">
+            <span class="pulse-dot"></span> SMART DASHBOARD PRESENTATION
+          </div>
+        </div>
+
+        <div class="header-brand-right">
+          <div class="major-badge badge-rpl" title="Rekayasa Perangkat Lunak">
+            <div class="major-logo-box">
+              <img src="img/RPL.jpg" alt="Logo RPL" />
+            </div>
+            <span class="major-name">RPL</span>
+          </div>
+          <div class="major-badge badge-tkj" title="Teknik Komputer & Jaringan">
+            <div class="major-logo-box">
+              <img src="img/TKJ.jpg" alt="Logo TKJ" />
+            </div>
+            <span class="major-name">TKJ</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-showcase-area">
+        <div class="game-card card-rpl-theme active-anim staggered-2">
+          <div class="card-bg-image img-game-1"></div>
+          <div class="card-glass-overlay"></div>
+          <div class="card-content-holder">
+            <div class="card-badge-category">SOFTWARE ENGINEERING</div>
+            <h2 class="game-title">LOGIC MASTER</h2>
+            <p class="game-description">
+              Asah logika coding kamu lewat petualangan algoritma interaktif,
+              kuis pemrograman, dan teka-teki logika yang menantang.
+            </p>
+            <a href="#" class="action-play-btn">
+              LAUNCH GAME <i class="fa-solid fa-gamepad"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="game-card card-tkj-theme active-anim staggered-3">
+          <div class="card-bg-image img-game-2"></div>
+          <div class="card-glass-overlay"></div>
+          <div class="card-content-holder">
+            <div class="card-badge-category">NETWORKING & CYBER</div>
+            <h2 class="game-title">NET RUNNER</h2>
+            <p class="game-description">
+              Atur rute server sekolah, hubungkan kabel topologi jaringan secara
+              virtual, dan amankan lalu lintas data dari serangan cyber hacker.
+            </p>
+            <a href="#" class="action-play-btn">
+              LAUNCH GAME <i class="fa-solid fa-gamepad"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="game-card card-mm-theme active-anim staggered-4">
+          <div class="card-bg-image img-game-3"></div>
+          <div class="card-glass-overlay"></div>
+          <div class="card-content-holder">
+            <div class="card-badge-category">CREATIVE MULTIMEDIA</div>
+            <h2 class="game-title">CYBER STRIKE</h2>
+            <p class="game-description">
+              Uji ketangkasan refleks kamu dalam game aksi arcade futuristik
+              dengan visual efek memukau hasil karya kolaborasi kreativitas
+              siswa.
+            </p>
+            <a href="#" class="action-play-btn">
+              LAUNCH GAME <i class="fa-solid fa-gamepad"></i>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="main-portal-footer active-anim staggered-5">
+        <div class="footer-line"></div>
+        <p>
+          &copy; 2026 SMK Swasta Mandiri - YPSM. Optimized for Smartboard
+          Presentation & Mobile Terminal.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          const welcome = document.getElementById("welcome-screen");
+          welcome.classList.add("system-ready");
+          setTimeout(() => {
+            welcome.style.display = "none";
+            // Mulai animasi stagger setelah welcome screen hilang
+            const activeElements = document.querySelectorAll(
+              ".main-container > .active-anim, .game-showcase-area > .active-anim",
+            );
+            activeElements.forEach((el) => (el.style.opacity = "1"));
+          }, 1000); // Sinkron dengan CSS Transition
+        }, 3500); // Durasi Preloader Tampil (3.5 detik)
+      });
+    </script>
+  </body>
+</html>
