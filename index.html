@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Hub - SMK Swasta Mandiri</title>
+    <title>SMK Swasta Mandiri - Cyber Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Orbitron:wght@700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Orbitron:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -15,143 +17,140 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="welcome-screen">
-      <div class="welcome-content">
-        <div class="welcome-logo-box">
-          <img
-            src="img/logo.jpeg"
-            alt="Logo SMK Mandiri"
-            class="welcome-logo-img"
-          />
+    <div class="cyber-bg">
+      <div class="scan-line"></div>
+      <div class="orb orb-cyan"></div>
+      <div class="orb orb-red"></div>
+    </div>
+
+    <div id="boot-loader">
+      <div class="hud-container">
+        <div class="hud-ring">
+          <div class="ring ring-outer"></div>
+          <div class="ring ring-inner"></div>
+          <img src="img/logo.jpeg" alt="SMK Logo" class="boot-logo-center" />
         </div>
-        <h1 class="welcome-title">SYSTEM INITIATING...</h1>
-        <h2 class="welcome-school">SMK SWASTA MANDIRI</h2>
-        <p class="welcome-sub">
-          Yayasan Pendidikan Siap Mandiri - Interactive Terminal
+
+        <h1 class="boot-title" data-text="SYSTEM INITIALIZING">
+          SYSTEM INITIALIZING
+        </h1>
+        <div class="cyber-progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <p class="boot-status">
+          Authenticating YPSM Credentials <span class="blink">...</span>
         </p>
-        <div class="loading-container">
-          <div class="loading-bar"></div>
-          <span class="loading-text">CONNECTING TO GAME HUB...</span>
-        </div>
       </div>
     </div>
 
-    <div class="main-container">
-      <div class="cyber-glow glow-gold"></div>
-      <div class="cyber-glow glow-blue"></div>
-      <div class="cyber-glow glow-red"></div>
-
-      <header class="main-header active-anim staggered-1">
-        <div class="header-brand-left">
-          <div
-            class="logo-wrapper badge-ypsm"
-            title="Yayasan Pendidikan Siap Mandiri"
-          >
-            <img src="img/logo.jpeg" alt="Logo YPSM" class="img-fluid-logo" />
-          </div>
+    <div class="portal-wrapper">
+      <header class="main-header">
+        <div class="brand-ypsm">
+          <img src="img/logo.jpeg" alt="YPSM" />
           <div class="brand-text">
-            <span class="text-top">YAYASAN PENDIDIKAN</span>
-            <span class="text-bottom">SIAP MANDIRI</span>
+            <h4>YAYASAN PENDIDIKAN</h4>
+            <p>SIAP MANDIRI</p>
           </div>
         </div>
 
-        <div class="header-brand-center">
-          <h1 class="portal-main-title">SMK SWASTA MANDIRI</h1>
-          <div class="portal-badge-tag">
-            <span class="pulse-dot"></span> SMART DASHBOARD PRESENTATION
-          </div>
+        <div class="school-title-hub">
+          <h1>SMK SWASTA MANDIRI</h1>
+          <p>VIRTUAL GAME TERMINAL</p>
         </div>
 
-        <div class="header-brand-right">
-          <div class="major-badge badge-rpl" title="Rekayasa Perangkat Lunak">
-            <div class="major-logo-box">
-              <img src="img/RPL.jpg" alt="Logo RPL" />
-            </div>
-            <span class="major-name">RPL</span>
+        <div class="major-badges">
+          <div class="badge border-cyan">
+            <img src="img/RPL.jpg" alt="RPL" />
+            <span>RPL</span>
           </div>
-          <div class="major-badge badge-tkj" title="Teknik Komputer & Jaringan">
-            <div class="major-logo-box">
-              <img src="img/TKJ.jpg" alt="Logo TKJ" />
-            </div>
-            <span class="major-name">TKJ</span>
+          <div class="badge border-red">
+            <img src="img/TKJ.jpg" alt="TKJ" />
+            <span>TKJ</span>
           </div>
         </div>
       </header>
 
-      <main class="game-showcase-area">
-        <div class="game-card card-rpl-theme active-anim staggered-2">
-          <div class="card-bg-image img-game-1"></div>
-          <div class="card-glass-overlay"></div>
-          <div class="card-content-holder">
-            <div class="card-badge-category">SOFTWARE ENGINEERING</div>
-            <h2 class="game-title">LOGIC MASTER</h2>
-            <p class="game-description">
-              Asah logika coding kamu lewat petualangan algoritma interaktif,
-              kuis pemrograman, dan teka-teki logika yang menantang.
+      <main class="panel-container">
+        <article class="game-panel panel-rpl">
+          <div
+            class="panel-img"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&quot;);
+            "
+          ></div>
+          <div class="panel-content">
+            <p class="tag-title cyan-text">[ SOFTWARE DEVELOPMENT ]</p>
+            <h2>LOGIC MASTER</h2>
+            <p class="desc-text">
+              Uji logika dan algoritma Anda dalam tantangan koding interaktif
+              yang menantang kreativitas.
             </p>
-            <a href="#" class="action-play-btn">
-              LAUNCH GAME <i class="fa-solid fa-gamepad"></i>
-            </a>
+            <a href="#" class="btn-play"
+              >LAUNCH GAME <i class="fa-solid fa-bolt"></i
+            ></a>
           </div>
-        </div>
+        </article>
 
-        <div class="game-card card-tkj-theme active-anim staggered-3">
-          <div class="card-bg-image img-game-2"></div>
-          <div class="card-glass-overlay"></div>
-          <div class="card-content-holder">
-            <div class="card-badge-category">NETWORKING & CYBER</div>
-            <h2 class="game-title">NET RUNNER</h2>
-            <p class="game-description">
-              Atur rute server sekolah, hubungkan kabel topologi jaringan secara
-              virtual, dan amankan lalu lintas data dari serangan cyber hacker.
+        <article class="game-panel panel-tkj">
+          <div
+            class="panel-img"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1558494949-ef010cbdcc4b?q=80&w=1000&quot;);
+            "
+          ></div>
+          <div class="panel-content">
+            <p class="tag-title red-text">[ NETWORK SECURITY ]</p>
+            <h2>NET RUNNER</h2>
+            <p class="desc-text">
+              Hubungkan infrastruktur global dan amankan server dari ancaman
+              cyber secara real-time.
             </p>
-            <a href="#" class="action-play-btn">
-              LAUNCH GAME <i class="fa-solid fa-gamepad"></i>
-            </a>
+            <a href="#" class="btn-play"
+              >LAUNCH GAME <i class="fa-solid fa-bolt"></i
+            ></a>
           </div>
-        </div>
+        </article>
 
-        <div class="game-card card-mm-theme active-anim staggered-4">
-          <div class="card-bg-image img-game-3"></div>
-          <div class="card-glass-overlay"></div>
-          <div class="card-content-holder">
-            <div class="card-badge-category">CREATIVE MULTIMEDIA</div>
-            <h2 class="game-title">CYBER STRIKE</h2>
-            <p class="game-description">
-              Uji ketangkasan refleks kamu dalam game aksi arcade futuristik
-              dengan visual efek memukau hasil karya kolaborasi kreativitas
-              siswa.
+        <article class="game-panel panel-mm">
+          <div
+            class="panel-img"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&quot;);
+            "
+          ></div>
+          <div class="panel-content">
+            <p class="tag-title purple-text">[ CREATIVE HUB ]</p>
+            <h2>CYBER STRIKE</h2>
+            <p class="desc-text">
+              Pertempuran aksi futuristik dengan visual memukau hasil karya
+              kolaborasi siswa inovatif.
             </p>
-            <a href="#" class="action-play-btn">
-              LAUNCH GAME <i class="fa-solid fa-gamepad"></i>
-            </a>
+            <a href="#" class="btn-play"
+              >LAUNCH GAME <i class="fa-solid fa-bolt"></i
+            ></a>
           </div>
-        </div>
+        </article>
       </main>
 
-      <footer class="main-portal-footer active-anim staggered-5">
-        <div class="footer-line"></div>
-        <p>
-          &copy; 2026 SMK Swasta Mandiri - YPSM. Optimized for Smartboard
-          Presentation & Mobile Terminal.
-        </p>
+      <footer class="cyber-footer">
+        &copy; 2026 SMK SWASTA MANDIRI - YPSM HUB. SYSTEM STATUS:
+        <span class="cyan-text">ACTIVE</span>
       </footer>
     </div>
 
     <script>
-      window.addEventListener("DOMContentLoaded", () => {
+      window.addEventListener("load", () => {
+        // Waktu loading diset 4 detik agar animasi loading bar selesai
         setTimeout(() => {
-          const welcome = document.getElementById("welcome-screen");
-          welcome.classList.add("system-ready");
+          const loader = document.getElementById("boot-loader");
+          loader.classList.add("hide");
+          document.body.classList.add("app-ready");
+
+          // Hapus loader dari memori setelah animasi hilang
           setTimeout(() => {
-            welcome.style.display = "none";
-            // Mulai animasi stagger setelah welcome screen hilang
-            const activeElements = document.querySelectorAll(
-              ".main-container > .active-anim, .game-showcase-area > .active-anim",
-            );
-            activeElements.forEach((el) => (el.style.opacity = "1"));
-          }, 1000); // Sinkron dengan CSS Transition
-        }, 3500); // Durasi Preloader Tampil (3.5 detik)
+            loader.style.display = "none";
+          }, 800);
+        }, 4000);
       });
     </script>
   </body>
